@@ -22,8 +22,6 @@ async function checkUser(e) {
             const data = await res.json();
             const { token } = data;
             localStorage.setItem('token', token);
-            console.log('yendo a productos');
-            
             setTimeout(() => {
                 window.location.href = "products/products.html"
             }, 3000)

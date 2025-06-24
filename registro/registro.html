@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de usuario</title>
+    <link rel="stylesheet" href="registro.css">
+    <link rel="shortcut icon" href="/image/TokenBrandedXec.svg" type="image/x-icon">
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-header">
+            <h1>Crea tu cuenta</h1>
+            <p>Completa el formulario para comenzar</p>
+        </div>
+        
+        <form id="registerForm" action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Nombre completo</label>
+                <input type="text" id="name" name="name" placeholder="Juan Pérez" required minlength="3">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" name="password" placeholder="••••••••" required minlength="7" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$">
+                <span class="password-toggle" onclick="togglePassword()">👁️</span>
+                <p class="password-requirements">La contraseña debe tener al menos 7 caracteres, una mayúscula, una minúscula y un número.</p>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirm-password">Confirmar contraseña</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="••••••••" required>
+                <span class="password-toggle" onclick="toggleConfirmPassword()">👁️</span>
+            </div>
+            
+            <button type="submit" class="register-button">Registrarse</button>
+            
+            <div class="login-link">
+                ¿Ya tienes una cuenta? <a href="../index.html">Inicia sesión</a>
+            </div>
+        </form>
+    </div>
+
+    <script src="registro.js"></script>
+</body>
+</html>
